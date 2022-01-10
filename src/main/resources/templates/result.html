@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<h3 th:if='${error}' th:text='${error}' style='color: red;'></h3>
+<div th:unless='${error}'>
+    <h3 style='color: green;'>Success!</h3>
+    <div>Id.: <span th:text='${id}' /></div>
+    <div>Status: <span th:text='${status}' /></div>
+    <div>Charge id.: <span th:text='${chargeId}' /></div>
+    <div>Balance transaction id.: <span th:text='${balance_transaction}' /></div>
+</div>
+<a href='/checkout'>Checkout again</a>
+</body>
+</html>
